@@ -1,3 +1,4 @@
+//student crud routes
 const express = require('express')
 const routers = express.Router()
 routers.get('/get',(req,res)=>{
