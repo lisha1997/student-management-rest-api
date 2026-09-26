@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3000';
+//frontend integration with student api
+const API_URL = 'http://localhost:3000/siswa';
 
 const form = document.getElementById('siswaForm');
 
@@ -42,11 +43,6 @@ function showMessage(text, type) {
 
 }
 
-
-// ===============================
-// MEMBACA RESPONSE JSON
-// ===============================
-
 async function getResponseData(response) {
 
     const contentType =
@@ -71,11 +67,6 @@ async function getResponseData(response) {
     return await response.json();
 }
 
-
-// ===============================
-// GET SEMUA SISWA
-// ===============================
-
 async function getSiswa() {
 
     loading.style.display = 'block';
@@ -85,7 +76,7 @@ async function getSiswa() {
     try {
 
         const response =
-            await fetch(`${API_URL}/siswa`);
+            await fetch(`${API_URL}`);
 
 
         const result =
@@ -166,7 +157,6 @@ async function getSiswa() {
 
 
     } catch (error) {
-
         console.error(
             'GET SISWA ERROR:',
             error
@@ -197,15 +187,10 @@ form.addEventListener(
 
 
         const data = {
-
             nis: nis.value.trim(),
-
             nama: nama.value.trim(),
-
             kelas: kelas.value.trim(),
-
             jurusan: jurusan.value.trim(),
-
             alamat: alamat.value.trim()
 
         };
@@ -214,14 +199,11 @@ form.addEventListener(
         try {
 
             let response;
-
-
-
             if (siswaId.value) {
 
                 response =
                     await fetch(
-                        `${API_URL}/siswa/put/${siswaId.value}`,
+                        `${API_URL}/put/${siswaId.value}`,
                         {
 
                             method: 'PUT',
@@ -239,16 +221,11 @@ form.addEventListener(
 
             }
 
-
-            // ===========================
-            // TAMBAH SISWA
-            // ===========================
-
             else {
 
                 response =
                     await fetch(
-                        `${API_URL}/siswa/post`,
+                        `${API_URL}/post`,
                         {
 
                             method: 'POST',
@@ -313,18 +290,13 @@ form.addEventListener(
     }
 );
 
-
-// ===============================
-// EDIT SISWA
-// ===============================
-
 async function editSiswa(id) {
 
     try {
 
         const response =
             await fetch(
-                `${API_URL}/siswa/${id}`
+                `${API_URL}/${id}`
             );
 
 
@@ -400,10 +372,6 @@ async function editSiswa(id) {
 }
 
 
-// ===============================
-// HAPUS SISWA
-// ===============================
-
 async function deleteSiswa(id) {
 
     const yakin =
@@ -423,7 +391,7 @@ async function deleteSiswa(id) {
 
         const response =
             await fetch(
-                `${API_URL}/siswa/delete/${id}`,
+                `${API_URL}/delete/${id}`,
                 {
                     method: 'DELETE'
                 }
@@ -472,10 +440,6 @@ async function deleteSiswa(id) {
 
 }
 
-
-// ===============================
-// RESET FORM
-// ===============================
 
 function resetForm() {
 
