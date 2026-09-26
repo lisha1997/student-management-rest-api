@@ -1,0 +1,95 @@
+{
+  "info": {
+    "_postman_id": "4d4029e2-2772-426f-ba33-64504fc21a1e",
+    "name": "APIpenilaian",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52248229",
+    "_collection_link": "https://go.postman.co/collection/52248229-4d4029e2-2772-426f-ba33-64504fc21a1e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "siswa",
+      "item": [
+        {
+          "name": "get data siswa",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get data by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "post data siswa",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}:{{port}}/siswa/post",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "siswa",
+                "post"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "put data siswa",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{host}}:{{port}}/siswa/id",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "siswa",
+                "id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete data siswa",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{host}}:{{port}}/siswa/1",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "siswa",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e3a8a;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #334155;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #334155;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 11px 13px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+
+    font-size: 14px;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button {
+    border: none;
+    padding: 10px 16px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* Tombol tambah/update */
+
+#submitButton {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* Tombol batal */
+
+button.cancel {
+    background: #64748b;
+    color: white;
+}
+
+
+/* Tombol refresh */
+
+.header-list button {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* =========================================
+   HEADER DAFTAR
+========================================= */
+
+.header-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+#message {
+    display: none;
+
+    padding: 13px 16px;
+
+    margin-bottom: 20px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+}
+
+
+/* Pesan sukses */
+
+#message.success {
+    display: block;
+
+    background: #dcfce7;
+    color: #166534;
+
+    border: 1px solid #86efac;
+}
+
+
+/* Pesan error */
+
+#message.error {
+    display: block;
+
+    background: #fee2e2;
+    color: #991b1b;
+
+    border: 1px solid #fca5a5;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+#loading {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+
+    background: white;
+}
+
+th,
+td {
+    padding: 12px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    text-align: left;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================================
+   BUTTON AKSI
+========================================= */
+
+button.edit {
+    background: #f59e0b;
+    color: white;
+}
+
+button.delete {
+    background: #dc2626;
+    color: white;
+
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .header-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+}
